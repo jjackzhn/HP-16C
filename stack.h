@@ -45,6 +45,6 @@ class Stack{
 		uint64_t t;
 		uint64_t lastX;
 
-}
+};
 
 #endif
