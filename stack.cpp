@@ -1,4 +1,5 @@
 #include "stack.h"
+#include <iostream>
 
 //Roll the contents of the stack down one register
 void Stack::rollDown(){
@@ -40,6 +41,16 @@ uint64_t Stack::pop(){
 	rollDown();
 	t=z;
 	return ret;
+}
+
+//Print the current status of the stack
+void Stack::printStatus() const{
+	std::cout<<"=====================\n"
+		<<"Current stack:\nT:"<<t
+		<<"\nZ:"<<z
+		<<"\nY:"<<y
+		<<"\nX:"<<x
+		<<"\n=====================\n";
 }
 
 

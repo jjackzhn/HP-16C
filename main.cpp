@@ -7,6 +7,7 @@ int main(){
 	stk.push(2);
 	stk.push(3);
 	stk.push(4);
+	stk.printStatus();
 	for(int i=0;i<10;i++)
 		std::cout<<stk.pop()<<std::endl;
 	return 0;

@@ -37,6 +37,9 @@ class Stack{
 		 */
 		uint64_t pop();
 
+		//Print the current status of the stack
+		void printStatus() const;
+
 	private:
 
 		uint64_t x;
