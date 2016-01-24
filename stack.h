@@ -19,6 +19,11 @@
 class Stack{
 	public:
 
+		//Default constructor
+		Stack(){
+			x=y=z=t=0;
+		}
+
 		//Roll the contents of the stack down one register
 		void rollDown();
 		
