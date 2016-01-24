@@ -1,5 +1,6 @@
 #include <iostream>
 #include "stack.h"
+#include "arithops.h"
 
 int main(){
 	Stack stk;
@@ -8,7 +9,7 @@ int main(){
 	stk.push(3);
 	stk.push(4);
 	stk.printStatus();
-	for(int i=0;i<10;i++)
-		std::cout<<stk.pop()<<std::endl;
+	add(stk);
+	stk.printStatus();
 	return 0;
 }

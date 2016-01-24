@@ -1,5 +1,5 @@
 EXENAME = main
-OBJS = main.o stack.o
+OBJS = main.o stack.o arithops.o
 
 CXX = g++
 CXXFLAGS = -std=c++14 -c -Wall -Wextra
@@ -16,6 +16,9 @@ main.o: main.cpp stack.h
 
 stack.o: stack.cpp stack.h
 	$(CXX) $(CXXFLAGS) stack.cpp
+
+arithops.o: arithops.cpp arithops.h
+	$(CXX) $(CXXFLAGS) arithops.cpp
 
 clean:
 	rm -f *.o $(EXENAME)
