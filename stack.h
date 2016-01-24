@@ -29,24 +29,24 @@ class Stack{
 		void XexY();
 
 		//Push a number into the stack
-		void push(uint64_t num);
+		void push(int64_t num);
 
 		/**
 		 * Pop x register and drop the stack
 		 * Returns the content of x register that was popped.
 		 */
-		uint64_t pop();
+		int64_t pop();
 
 		//Print the current status of the stack
 		void printStatus() const;
 
 	private:
 
-		uint64_t x;
-		uint64_t y;
-		uint64_t z;
-		uint64_t t;
-		uint64_t lastX;
+		int64_t x;
+		int64_t y;
+		int64_t z;
+		int64_t t;
+		int64_t lastX;
 
 };
 

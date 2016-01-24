@@ -11,5 +11,14 @@ int main(){
 	stk.printStatus();
 	add(stk);
 	stk.printStatus();
+	sub(stk);
+	stk.printStatus();
+	stk.push(5);
+	mul(stk);
+	stk.printStatus();
+	stk.push(4);
+	div(stk);
+	stk.printStatus();
+
 	return 0;
 }
