@@ -19,4 +19,13 @@ int64_t mul(Stack& stk);
 //Division
 int64_t div(Stack& stk);
 
+//Absolute value
+int64_t abs(Stack& stk);
+
+//Reverse sign
+int64_t chs(Stack& stk);
+
+//Remainder
+int64_t rmd(Stack& stk);
+
 #endif

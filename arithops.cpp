@@ -32,4 +32,27 @@ int64_t div(Stack& stk){
 	return temp;
 }
 
+//Absolute value
+int64_t abs(Stack& stk){
+	int64_t temp=stk.pop();
+	temp=(temp<0)?(0-temp):temp;
+	stk.push(temp);
+	return temp;
+}
+
+//Reverse sign
+int64_t chs(Stack& stk){
+	int64_t temp=stk.pop();
+	temp=0-temp;
+	stk.push(temp);
+	return temp;
+}
+
+//Remainder
+int64_t rmd(Stack& stk){
+	int64_t temp=stk.pop();
+	temp=stk.pop()%temp;
+	stk.push(temp);
+	return temp;
+}
 

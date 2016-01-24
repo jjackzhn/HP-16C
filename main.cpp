@@ -5,7 +5,7 @@
 #include "arithops.h"
 
 void printIntro(){
-	std::cout<<"HP-16C Programming Environment\n"
+	std::cout<<"HP-16C Simulator\n"
 		<<"Yan Zhan (c) 2016 All Rights Reserved\n"<<std::endl;
 }
 
@@ -15,10 +15,14 @@ void printHelp(){
 		<<"rdn		Roll stack down one register\n"
 		<<"rup		Roll stack up one register\n"
 		<<"xexy		Exchange contents in x and y registers\n"
-		<<"add		x=x+y\n"
-		<<"sub		x=y-x\n"
-		<<"mul		x=x*y\n"
-		<<"div		x=y/x"<<std::endl;
+		<<"add		Addition\n"
+		<<"sub		Substraction\n"
+		<<"mul		Multiplication\n"
+		<<"div		Division\n"
+		<<"abs		Absolute value\n"
+		<<"chs		Change sign (x=-x)\n"
+		<<"rmd		Remainder"
+		<<"exit		Exit the program"<<std::endl;
 }
 
 bool isInt(std::string s){
@@ -40,7 +44,7 @@ int main(){
 		std::cin>>inst;
 		if(inst=="help")
 			printHelp();
-		else if(inst=="exit"||inst=="quit")
+		else if(inst=="exit"||inst=="quit"||inst=="q")
 			exit(0);
 		else if(isInt(inst))
 			stk.push(stoi(inst));
@@ -58,6 +62,14 @@ int main(){
 			stk.rollUp();
 		else if(inst=="xexy")
 			stk.XexY();
+		else if(inst=="abs")
+			abs(stk);
+		else if(inst=="chs")
+			chs(stk);
+		else if(inst=="rmd")
+			rmd(stk);
+		else
+			std::cout<<"Invalid command. Enter \"help\" to see available instructions."<<std::endl;
 	}
 
 	return 0;
